@@ -1,0 +1,120 @@
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+}
+
+header {
+    background: #1a1a1a;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    margin-left: 15px;
+    color: #0ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: #222;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero .btn {
+    padding: 12px 24px;
+    margin: 10px;
+    color: #fff;
+    background-color: #0ff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.hero .btn.secondary {
+    background-color: #666;
+}
+
+.hero .btn:hover {
+    background-color: #00cccc;
+}
+
+.features, .pricing, .screenshots {
+    padding: 40px 20px;
+    background: #181818;
+}
+
+.features ul, .pricing ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li, .pricing li {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.screenshots .carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 20px 0;
+}
+
+.screenshots img {
+    width: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.screenshots img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background: #1a1a1a;
+    text-align: center;
+    padding: 20px;
+}
+
+.socials a {
+    color: #0ff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    header, .cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .screenshots .carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .screenshots img {
+        width: 90%;
+    }
+}
